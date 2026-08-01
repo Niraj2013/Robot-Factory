@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Robot Factory</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Robot Factory</h1>
+            <p>Welcome to the Robot Factory!</p>
+            <p>Build your own custom robots! Earn Money! Upgrade your factory!</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#factory">Factory</a></li>
+                <li><a href="#upgrades">Upgrades</a></li>
+                <li><a href="#orders">Orders</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section id="dashboard">
+                <h2>Factory Dashboard</h2>
+
+                <div>
+                    <h3>Money</h3>
+                    <p>₹<span id="money">1000</span></p>
+                </div>
+
+                <div>
+                    <h3>Factory Level</h3>
+                    <p>Level<span id="factory-level">1</span></p>
+                </div>
+
+                <div>
+                    <h3>Electricity</h3>
+                    <p><span id="electricity">100</span>%</p>
+                </div>
+
+                <div>
+                    <h3>Workers</h3>
+                    <p><span id="workers">2</span></p>
+                </div>
+
+                <div>
+                    <h3>Reputation</h3>
+                    <p><span id="reputation">0</span></p>
+                </div>
+
+                <div>
+                    <h3>Current Production</h3>
+                    <p id="currentProduction">None</p>
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section id="factory">
+                <h2>Robot Production</h2>
+
+                <article>
+                    <h3>Toy Robot</h3>
+                    <p>Perfect for education and fun.</p>
+
+                    <ul>
+                        <li>Cost: ₹100</li>
+                        <li>Sell Price: ₹180</li>
+                        <li>Build Time: 5 seconds</li>
+                    </ul>
+
+                    <button onclick="buildToyRobot()">Build Toy Robot</button>
+
+                </article>
+
+                <article>
+                    <h3>Cleaning Robot</h3>
+                    <p>Keep your home spotless with our cleaning robot.</p>
+
+                    <ul>
+                        <li>Cost: ₹300</li>
+                        <li>Sell Price: ₹500</li>
+                        <li>Build Time: 10 seconds</li>
+                    </ul>
+
+                    <button onclick="buildCleaningRobot()">Build Cleaning Robot</button>
+
+                </article>
+
+                <article>
+                    <h3>Delivery Robot</h3>
+                    <p>Deliver packages quickly and efficiently with our delivery robot.</p>
+
+                    <ul>
+                        <li>Cost: ₹600</li>
+                        <li>Sell Price: ₹900</li>
+                        <li>Build Time: 15 seconds</li>
+                    </ul>
+
+                    <button onclick="buildDeliveryRobot()">Build Delivery Robot</button>
+
+                </article>
+                
+                <article>
+                    <h3>Security Robot</h3>
+                    <p>Protect your home or office with our security robot.</p>
+
+                    <ul>
+                        <li>Cost: ₹1000</li>
+                        <li>Sell Price: ₹1500</li>
+                        <li>Build Time: 20 seconds</li>
+                    </ul>
+
+                    <button onclick="buildSecurityRobot()">Build Security Robot</button>
+
+                </article>
+
+                <article>
+                    <h3>AI Assistant</h3>
+                    <p>Advanced Intelligent helper robot.</p>
+
+                    <ul>
+                        <li>Cost: ₹2000</li>
+                        <li>Sell Price: ₹3000</li>
+                        <li>Build Time: 30 seconds</li>
+                    </ul>
+
+                    <button onclick="buildAIRobot()">Build AI Robot</button>
+
+                </article>
+            </section>
+            <hr>
+
+            <section id="upgrades">
+                <h2>Factory Upgrades</h2>
+
+                <button onclick="upgradeMachines()">Better Machines(₹500)</button>
+                <button onclick="upgradeConveyer()">Faster Conveyer(₹800)</button>
+                <button onclick="hireWorkers()">Hire More Workers(₹1000)</button>
+                <button onclick="buySolarPower()">Solar Power(₹1500)</button>
+                <button onclick="buyBetterTools()">Better Tools(₹1200)</button>
+            </section>
+        </main>
