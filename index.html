@@ -158,7 +158,7 @@
                     <div class="robotCardInfo">
 
                         <p>Built: <span id="deliveryBuilt">0</span></p>
-                        <p>Profit: ₹<span id="deleviryProfit">300</span></p>
+                        <p>Profit: ₹<span id="deliveryProfit">300</span></p>
                     </div>
 
                 </article>
@@ -194,9 +194,26 @@
                         <li>Build Time: 30 seconds</li>
                     </ul>
 
-                    <button onclick="openWorkshop()">Build AI Robot</button>
+                        <button onclick="openWorkshop('AI Assistant',2000,3000,30)">
+                            Build AI Robot
+                        </button>
+
+                        <div class="robotCardInfo">
+
+                            <p>
+                                Built :
+                                <span id="aiBuilt">0</span>
+                            </p>
+
+                            <p>
+                                Profit :
+                                ₹<span id="aiProfit">1000</span>
+                            </p>
+
+                        </div>
 
                 </article>
+
             </section>
             <hr>
 
@@ -210,11 +227,68 @@
                 <button onclick="buyBetterTools()">Better Tools(₹1200)</button>
             </section>
             <hr>
+            <h3>Upgrade Status</h3>
+
+            <p>
+                Machine Level:
+                <span id="machineLevel">
+                    1
+                </span>
+            </p>
+
+            <p>
+                Conveyor Level:
+                <span id="conveyorLevel">
+                    1
+                </span>
+            </p>
+
+            <p>
+                Solar Panels:
+                <span id="solarLevel">
+                    0
+                </span>
+            </p>
+
+            <p>
+                Tool Level:
+                <span id="toolLevel">
+                    1
+                </span>
+            </p>
+
+            <p>
+                Worker Skill:
+                <span id="workerSkill">
+                    1
+                </span>
+            </p>
 
             <section id="orders">
                 <h2>Customer Orders</h2>
 
-                <p id="activeOrder">No active orders.</p>
+                <div class="orderCard">
+                    <h3 id="orderRobot">No Active Order</h3>
+
+                    <p>
+                        Reward:
+                        ₹<span id="orderReward">0</span>
+                    </p>
+
+                    <p>
+                        Time Remaining:
+                        <span id="orderTime">--</span>
+                    </p>
+
+                    <progress id="orderProgress" value="0" max="100">
+                    </progress>
+
+                    <button onclick="acceptOrder()">
+                        Accept Order
+                    </button>
+
+                </div>
+
             </section>
 
             <hr>
@@ -278,6 +352,22 @@
                 <div id="assemblyCanvas">
                     <div id="robotPreview"></div>
                 </div>
+                <h3>Assembly Progress</h3>
+
+                <progress id="assemblyProgress" value="0" max="100"></progress>
+
+                <p>
+                    Robot Status:
+                    <span id="robotStatus">
+                        Waiting...
+                    </span>
+                </p>
+
+                <p>Paint: <span id="paintStatus">Not Painted</span></p>
+
+                <p>AI: <span id="aiStatus">Not Installed</span></p>
+
+                <p>Quality: <span id="qualityStatus">Not Tested</span></p>
             </div>
 
             <div class="tools-panel">
@@ -287,7 +377,12 @@
                 <button onclick="qualityTest()">Quality Test</button>
                 <button onclick="completeRobot()">Complete Robot</button>
 
+                <h3>Workspace Log</h3>
+                <div id="workspaceLog">
+                    Workspace Ready...
+                </div>
             </div>
+
         </div>
     </div>
         <script src="script.js"></script>

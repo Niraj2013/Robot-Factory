@@ -391,6 +391,7 @@ footer{
 #robotWorkshop[hidden]{
     display:none;
 }
+
 .workshop-header{
     display: flex;
     justify-content: space-between;
@@ -502,5 +503,160 @@ footer{
 }
 
 #robotPreview::before{
-    content:"🤖";
+    content:"";
+}
+
+.robotCardInfo{
+    margin-top:18px;
+    border-top:2px solid #dbe8f5;
+    padding-top:15px;
+}
+
+.robotCardInfo p{
+    margin:8px 0;
+    font-weight:600;
+    color:#1565c0;
+}
+
+#upgrades + hr + h3{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:20px;
+    font-size:1.6rem;
+}
+
+#upgrades + hr + h3 + p,
+#upgrades + hr + h3 + p + p,
+#upgrades + hr + h3 + p + p + p,
+#upgrades + hr + h3 + p + p + p + p,
+#upgrades + hr + h3 + p + p + p + p + p{
+    background:white;
+    border-left:6px solid #1565c0;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+#machineLevel,
+#conveyorLevel,
+#solarLevel,
+#toolLevel,
+#workerSkill{
+    color:#1565c0;
+    font-weight: bold;
+}
+
+.orderCard{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    border-radius:18px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.orderCard h3{
+    color:#1565c0;
+    margin-bottom: 18px;
+}
+
+.orderCard p{
+    margin: 12px  0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.orderCard button{
+    margin-top:18px;
+    width: 100%;
+    padding: 14px;
+    background: #43a047;
+    color:white;
+    border:none;
+    border-radius: 12px;
+    cursor:pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.orderCard button:hover{
+    background: #2e7d32;
+    transform: translateY(-2px);
+}
+
+#orderProgress{
+    width:100%;
+    height:24px;
+    margin-top: 15px;
+}
+
+#assemblyProgress{
+    width: 100%;
+    height: 25px;
+    margin: 18px 0;
+}
+
+#robotStatus,
+#paintStatus,
+#aiStatus,
+#qualityStatus{
+    font-weight: bold;
+    color:#1565c0;
+}
+
+#workspaceLog{
+    margin-top: 18px;
+    background: white;
+    border:2px dashed #90caf9;
+    border-radius: 14px;
+    padding:15px;
+    min-height: 170px;
+    overflow-y:auto;
+    text-align: left;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+progress{
+    appearance: none;
+    width: 100%;
+    height: 20px;
+}
+
+progress::-webkit-progress-bar{
+    background:#e3eaf3;
+    border-radius: 15px;
+}
+
+progress::-webkit-progress-value{
+    background: #1565c0;
+    border-radius:15px;   
+}
+
+progress::-moz-progress-bar{
+    background:#1565c0;
+}
+
+@media(max-width:950px){
+    .workshop-body{
+    grid-template-columns: 1fr;
+    height:auto;
+    overflow-y:auto;
+}
+
+.parts-panel,
+.assembly-panel,
+.tools-panel{
+    width:100%;
+}
+
+#robotPreview{
+    width:180px;
+    height: 260px;
+    font-size: 3rem;
+}
+
 }
