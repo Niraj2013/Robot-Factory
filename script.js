@@ -1191,3 +1191,71 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 });
+
+function startTutorial(){
+    const steps = [
+        "Welcome to Robot Factory! Build robots, earn money, and grow your factory.",
+        "Use the Dashboard to monitor your money, workers, electricity, reputation, and factory progress.",
+        "Choose a robot in Robot Production and click its Build button to open the assembly workshop.",
+        "In the workshop, add the required robot parts using the Parts panel.",
+        "Use the factory tools to paint, install AI, test quality, and complete your robot.",
+        "Use Factory Upgrades to improve your machines, conveyor, workers, solar power, and tools.",
+        "Accept Customer Orders to complete special jobs and earn extra rewards.",
+        "You're ready to run your Robot Factory. Good luck!"
+    ];
+
+    let step = 0;
+
+    const tutorial = document.createElement("div");
+    tutorial.id = "tutorialOverlay";
+
+    tutorial.innerHTML = `
+        <div id="tutorialBox">
+            <h2>How to Play</h2>
+            <p id="tutorialText">${steps[0]}</p>
+            <div>
+                <button id="tutorialBack">Back</button>
+                <span id="tutorialStep">1 / ${steps.length}</span>
+                <button id="tutorialNext">Next</button>
+            </div>
+            <button id="tutorialSkip">Skip Tutorial</button>
+        </div>
+    `;
+
+    document.body.appendChild(tutorial);
+
+    const text = document.getElementById("tutorialText");
+    const stepText = document.getElementById("tutorialStep");
+    const back = document.getElementById("tutorialBack");
+    const next = document.getElementById("tutorialNext");
+    const skip = document.getElementById("tutorialSkip");
+
+    function updateTutorial(){
+        text.textContent = steps[step];
+        stepText.textContent = `${step + 1} / ${steps.length}`;
+        back.disabled = step === 0;
+        next.textContent = step === steps.length - 1 ? "Finish" : "Next";
+    }
+
+    next.onclick = function(){
+        if(step < steps.length - 1){
+            step++;
+            updateTutorial();
+        }else{
+            tutorial.remove();
+            localStorage.setItem("tutorialCompleted", "true");
+        }
+    };
+
+    back.onclick = function(){
+        if(step > 0){
+            step--;
+            updateTutorial();
+        }
+    };
+
+    skip.onclick = function(){
+        tutorial.remove();
+        localStorage.setItem("tutorialCompleted", "true");
+    };
+}

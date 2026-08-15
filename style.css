@@ -740,3 +740,60 @@ progress::-moz-progress-bar{
         width:94%;
     }
 }
+
+#tutorialOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+    padding:20px;
+}
+
+#tutorialBox{
+    background:white;
+    width:100%;
+    max-width:550px;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+#tutorialBox h2{
+    color:#1565c0;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+#tutorialText{
+    font-size:1.15rem;
+    margin-bottom:25px;
+    min-height:80px;
+}
+
+#tutorialBox button{
+    border:none;
+    background:#1565c0;
+    color:white;
+    padding:11px 20px;
+    margin:5px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#tutorialBox button:hover{
+    background:#0d47a1;
+}
+
+#tutorialBox button:disabled{
+    background:#b0bec5;
+    cursor:not-allowed;
+}
+
+#tutorialSkip{
+    background:#607d8b !important;
+}
