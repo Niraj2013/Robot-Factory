@@ -1,62 +1,73 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eef3f8;
-    color: #222;
-    line-height: 1.6;
+    font-family:"Trebuchet MS","Segoe UI",sans-serif;
+    background:#d5d7d8;
+    color:#202427;
+    line-height:1.5;
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width:11px;
 }
 
 ::-webkit-scrollbar-track{
-    background: #d9e3ef;
+    background:#b7bbbd;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #1565c0;
-    border-radius: 20px;
+    background:#4d5559;
+    border-radius:4px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background: #0d47a1;
+    background:#30363a;
 }
 
 header{
-    background: linear-gradient(135deg,#1565c0, #0d47a1);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #30383c 0px,
+            #30383c 3px,
+            #353e42 3px,
+            #353e42 6px
+        );
+    color:#f2f3f3;
+    text-align:left;
+    padding:35px 7%;
+    border-bottom:7px solid #e08b18;
+    box-shadow:0 4px 0 #171b1d;
 }
 
 header h1{
-    font-size: 3rem;
-    margin-bottom: 15px;
-    letter-spacing:2px;
+    font-family:"Courier New",monospace;
+    font-size:3rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:8px;
 }
 
 header p{
-    margin-top:8px;
-    font-size: 1.1rem;
+    color:#cbd0d2;
+    margin-top:4px;
+    font-size:1rem;
 }
 
 nav{
-    background:#263238;
-    position: sticky;
-    top: 0;
+    background:#202629;
+    position:sticky;
+    top:0;
     z-index:999;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    border-bottom:2px solid #596166;
 }
 
 nav ul{
@@ -67,51 +78,61 @@ nav ul{
 }
 
 nav li{
-    margin: 0;
+    border-right:1px solid #41494d;
 }
 
 nav a{
     display:block;
-    padding: 18px 26px;
-    color:white;
+    padding:14px 21px;
+    color:#e7e9ea;
     text-decoration:none;
-    transition:.3s;
-    font-weight:600;
+    font-family:"Courier New",monospace;
+    font-size:.9rem;
+    font-weight:bold;
+    text-transform:uppercase;
+    transition:.2s;
 }
 
 nav a:hover{
-    background:#1976d2;
+    background:#e08b18;
+    color:#16191a;
 }
 
 main{
     width:92%;
-    max-width: 1350px;
-    margin: 35px auto;
+    max-width:1350px;
+    margin:30px auto;
 }
 
 section{
-    background:white;
-    border-radius: 16px;
-    padding: 30px;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    background:#eceeef;
+    border:2px solid #92999d;
+    border-radius:4px;
+    padding:28px;
+    margin-bottom:30px;
+    box-shadow:5px 5px 0 #9da2a4;
 }
 
 section h2{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color:#1565c0;
+    text-align:left;
+    font-family:"Courier New",monospace;
+    font-size:1.7rem;
+    color:#30383c;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:24px;
+    padding-bottom:10px;
+    border-bottom:3px solid #e08b18;
 }
 
 hr{
-display:none;
+    display:none;
 }
 
 #dashboard{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:14px;
 }
 
 #dashboard h2{
@@ -119,52 +140,57 @@ display:none;
 }
 
 #dashboard div{
-    background:linear-gradient(135deg,#ffffff,#f4f8fc);
-    border-left:6px solid #1565c0;
-    border-radius: 15px;
-    padding:22px;
-    transition:.3s;
+    background:#cfd3d5;
+    border:2px solid #8b9296;
+    border-left:7px solid #555d61;
+    border-radius:3px;
+    padding:17px;
+    transition:.2s;
 }
 
 #dashboard div:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.12);
+    transform:translate(-2px,-2px);
+    border-left-color:#e08b18;
+    box-shadow:4px 4px 0 #9da2a4;
 }
 
 #dashboard div h3{
-    margin-bottom: 10px;
-    color:#1565c0;
+    color:#4a5358;
+    font-family:"Courier New",monospace;
+    font-size:.9rem;
+    text-transform:uppercase;
+    margin-bottom:8px;
 }
 
 #dashboard div p{
-    font-size: 1.35rem;
-    font-weight: bold;
+    font-size:1.3rem;
+    font-weight:bold;
 }
 
 #money{
-    color:#2e7d32;
+    color:#26753a;
 }
 
 #factory-level{
-    color:#ff9800;
+    color:#c56d00;
 }
 
 #electricity{
-    color:#f44336;
+    color:#b6382d;
 }
 
 #workers{
-    color:#6a1b9a;
+    color:#5c4380;
 }
 
 #reputation{
-    color:#1565c0;
+    color:#315f82;
 }
 
 #factory{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns:repeat(auto-fit,minmax(285px,1fr));
+    gap:18px;
 }
 
 #factory h2{
@@ -172,62 +198,81 @@ display:none;
 }
 
 #factory article{
-    background:#fafcff;
-    border-left:2px solid #dbe8f5;
-    border-radius: 18px;
-    padding:22px;
-    transition:.3s;
+    background:#dfe2e3;
+    border:2px solid #969da1;
+    border-radius:4px;
+    padding:20px;
     display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:330px;
+    transition:.2s;
 }
 
 #factory article:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.12);
-    border-left:2px solid #1565c0;
+    transform:translate(-3px,-3px);
+    border-color:#e08b18;
+    box-shadow:5px 5px 0 #9da2a4;
 }
 
 #factory article h3{
-    margin-bottom: 10px;
-    color:#1565c0;
-    font-size: 1.4rem;
+    font-family:"Courier New",monospace;
+    color:#30383c;
+    text-transform:uppercase;
+    font-size:1.25rem;
+    margin-bottom:9px;
 }
 
 #factory article p{
-    color: #555;
-    margin-bottom: 15px;
+    color:#4f575b;
+    margin-bottom:14px;
 }
 
 #factory article ul{
     list-style:none;
-    margin-bottom: 20px;
+    margin-bottom:18px;
 }
 
 #factory article ul li{
-    background:#eef5fc;
-    padding: 10px 14px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-    font-weight: 500;
+    background:#c9cdcf;
+    border-left:4px solid #687176;
+    padding:8px 11px;
+    margin-bottom:6px;
+    font-family:"Courier New",monospace;
+    font-size:.88rem;
 }
 
 #factory button{
     width:100%;
-    font-size: 1rem;
-    background:#1565c0;
-    color:white;
-    border:none;
-    padding: 10px 14px;
-    border-radius: 12px;
-    cursor:pointer;
-    transition:.3s;
+    font-family:"Courier New",monospace;
     font-weight:bold;
+    font-size:.9rem;
+    background:#3d464a;
+    color:#fff;
+    border:2px solid #252b2e;
+    padding:11px 14px;
+    border-radius:3px;
+    cursor:pointer;
+    transition:.2s;
 }
 
 #factory button:hover{
-    background:#0d47a1;
-    transform:scale(1.03);
+    background:#e08b18;
+    color:#171a1b;
+    border-color:#9b5e08;
+}
+
+.robotCardInfo{
+    margin-top:16px;
+    border-top:2px solid #aab0b3;
+    padding-top:12px;
+}
+
+.robotCardInfo p{
+    margin:6px 0;
+    color:#30383c;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
 }
 
 #upgrades{
@@ -235,43 +280,120 @@ display:none;
 }
 
 #upgrades button{
-    margin: 12px;
-    border:none;
-    font-size: 1rem;
-    background:#ff9800;
-    color:white;
-    border:none;
-    padding: 16px 22px;
-    border-radius: 14px;
-    cursor:pointer;
-    transition:.3s;
+    margin:7px;
+    border:2px solid #8e5a0b;
+    font-family:"Courier New",monospace;
     font-weight:bold;
+    font-size:.9rem;
+    background:#e08b18;
+    color:#171a1b;
+    padding:13px 19px;
+    border-radius:3px;
+    cursor:pointer;
+    transition:.2s;
 }
 
 #upgrades button:hover{
-    background:#ef6c00;
-    transform:translateY(-3px);
-    box-shadow: 0 10px 18px rgba(0,0,0,.18);
+    background:#f0a52b;
+    transform:translateY(-2px);
+    box-shadow:3px 3px 0 #8f9699;
+}
+
+#upgrades + hr + h3{
+    background:#30383c;
+    color:#fff;
+    width:92%;
+    max-width:1350px;
+    margin:0 auto 14px;
+    padding:14px 20px;
+    border-left:7px solid #e08b18;
+    font-family:"Courier New",monospace;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+#upgrades + hr + h3 + p,
+#upgrades + hr + h3 + p + p,
+#upgrades + hr + h3 + p + p + p,
+#upgrades + hr + h3 + p + p + p + p,
+#upgrades + hr + h3 + p + p + p + p + p{
+    width:92%;
+    max-width:1350px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#dfe2e3;
+    border:1px solid #999fa2;
+    border-left:6px solid #626a6e;
+    padding:12px 18px;
+    margin-bottom:8px;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+}
+
+#machineLevel,
+#conveyorLevel,
+#solarLevel,
+#toolLevel,
+#workerSkill{
+    color:#a45f05;
 }
 
 #orders{
     text-align:center;
 }
 
-#activeOrder{
-    font-size: 1.3rem;
-    font-weight: 600;
-    color:#1565c0;
-    background:#eef5fc;
-    border:2px dashed #90caf9;
-    border-radius: 14px;
-    padding: 25px;
+.orderCard{
+    max-width:500px;
+    margin:auto;
+    background:#d7dadb;
+    border:3px solid #555e62;
+    border-radius:3px;
+    padding:24px;
+    box-shadow:5px 5px 0 #a0a5a7;
+}
+
+.orderCard h3{
+    color:#30383c;
+    font-family:"Courier New",monospace;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.orderCard p{
+    margin:11px 0;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+}
+
+.orderCard button{
+    margin-top:16px;
+    width:100%;
+    padding:13px;
+    background:#347a43;
+    color:white;
+    border:2px solid #24582f;
+    border-radius:3px;
+    cursor:pointer;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.orderCard button:hover{
+    background:#429956;
+    transform:translateY(-2px);
+}
+
+#orderProgress{
+    width:100%;
+    height:22px;
+    margin-top:15px;
 }
 
 #statistics{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:14px;
 }
 
 #statistics h2{
@@ -279,44 +401,37 @@ display:none;
 }
 
 #statistics p{
-    font-size: 1.1rem;
-    font-weight: 600;
-    background:#f7fbff;
-    border-left:6px solid #1565c0;
-    border-radius: 14px;
-    padding: 18px;
-    transition:.3s;
-}
-
-#statistics p:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+    font-size:1rem;
+    font-weight:bold;
+    font-family:"Courier New",monospace;
+    background:#d8dcdd;
+    border:2px solid #999fa2;
+    border-left:6px solid #555d61;
+    padding:16px;
 }
 
 #statistics span{
-    color:#1565c0;
-    font-weight: bold;
+    color:#315f82;
 }
 
 #achievements ul{
     list-style:none;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:12px;
 }
 
 #achievements li{
-    background:linear-gradient(135deg,#fff8e1,#fff3c4);
-    border-left:6px solid #ffc107;
-    border-radius: 14px;
-    padding: 18px;
-    font-weight: 600;
-    transition:.3s;
+    background:#d9dcdd;
+    border:2px solid #9a9fa1;
+    border-left:6px solid #e08b18;
+    padding:15px;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
 }
 
 #achievements li:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+    background:#e2e4e5;
 }
 
 #settings{
@@ -324,36 +439,278 @@ display:none;
 }
 
 #settings button{
-    margin: 12px;
-    border:none;
-    font-size: 1rem;
-    font-weight: bold;
-    background:#1565c0;
-    color:#ffffff;
-    padding: 16px 28px;
-    border-radius: 14px;
+    margin:8px;
+    border:2px solid #252b2e;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+    background:#3d464a;
+    color:#fff;
+    padding:13px 23px;
+    border-radius:3px;
     cursor:pointer;
-    transition:.3s;
+    transition:.2s;
 }
 
 #settings button:hover{
-    background:#0d47a1;
-    transform:translateY(-3px);
-    box-shadow: 0 10px 18px rgba(0,0,0,.18);
+    background:#e08b18;
+    color:#171a1b;
 }
 
 footer{
     text-align:center;
-    padding: 25px;
-    background:#263238;
-    color:white;
-    font-size: 0.9rem;
-    margin-top:50px;
+    padding:24px;
+    background:#202629;
+    color:#cbd0d2;
+    border-top:5px solid #e08b18;
+    font-family:"Courier New",monospace;
+    font-size:.85rem;
+    margin-top:45px;
 }
-@media (max-width:768px){
+
+#robotWorkshop{
+    position:fixed;
+    inset:0;
+    background:rgba(20,24,26,.94);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    z-index:1000;
+}
+
+#robotWorkshop[hidden]{
+    display:none;
+}
+
+.workshop-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#252d30;
+    color:white;
+    padding:15px 20px;
+    border:3px solid #596166;
+    border-bottom:4px solid #e08b18;
+}
+
+.workshop-header h2{
+    font-family:"Courier New",monospace;
+    font-size:1.4rem;
+    letter-spacing:1px;
+}
+
+#closeWorkshopButton{
+    background:#9e3029;
+    border:2px solid #64201c;
+    border-radius:3px;
+    width:42px;
+    height:42px;
+    color:white;
+    font-size:1.5rem;
+    cursor:pointer;
+    transition:.2s;
+}
+
+#closeWorkshopButton:hover{
+    background:#d14940;
+}
+
+.workshop-body{
+    background:#c7cbcd;
+    width:100%;
+    max-width:1200px;
+    height:80vh;
+    display:grid;
+    grid-template-columns:230px 1fr 230px;
+    overflow:hidden;
+    border:3px solid #596166;
+    box-shadow:8px 8px 0 rgba(0,0,0,.35);
+}
+
+.parts-panel,
+.tools-panel{
+    background:#343c40;
+    color:#fff;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.parts-panel h3,
+.tools-panel h3{
+    margin-bottom:18px;
+    color:#e08b18;
+    text-align:center;
+    font-family:"Courier New",monospace;
+    text-transform:uppercase;
+    font-size:1rem;
+}
+
+.parts-panel button,
+.tools-panel button{
+    display:block;
+    width:100%;
+    margin-bottom:11px;
+    padding:12px;
+    background:#4b555a;
+    color:#fff;
+    border:2px solid #697277;
+    border-radius:3px;
+    cursor:pointer;
+    transition:.2s;
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+}
+
+.parts-panel button:hover,
+.tools-panel button:hover{
+    background:#e08b18;
+    color:#1c2022;
+    border-color:#9c630d;
+}
+
+.assembly-panel{
+    background:#e2e5e6;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.assembly-panel h3{
+    margin-bottom:14px;
+    color:#30383c;
+    font-family:"Courier New",monospace;
+    text-transform:uppercase;
+}
+
+#assemblyCanvas{
+    flex:1;
+    width:100%;
+    background:
+        linear-gradient(#c4c9cb 1px,transparent 1px),
+        linear-gradient(90deg,#c4c9cb 1px,transparent 1px);
+    background-size:25px 25px;
+    background-color:#e7e9ea;
+    border:3px dashed #777f83;
+    border-radius:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#robotPreview{
+    width:260px;
+    height:360px;
+    border:3px solid #555e62;
+    background:#d9dcdd;
+    border-radius:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:0;
+    color:#30383c;
+    position:relative;
+}
+
+#robotPreview::before{
+    content:"";
+    width:95px;
+    height:95px;
+    border:8px solid #596166;
+    border-radius:8px;
+    position:absolute;
+    top:65px;
+}
+
+#robotPreview::after{
+    content:"";
+    width:130px;
+    height:120px;
+    border:8px solid #596166;
+    border-radius:8px;
+    position:absolute;
+    top:175px;
+}
+
+#assemblyProgress{
+    width:100%;
+    height:24px;
+    margin:15px 0;
+}
+
+#robotStatus,
+#paintStatus,
+#aiStatus,
+#qualityStatus{
+    font-family:"Courier New",monospace;
+    font-weight:bold;
+    color:#315f82;
+}
+
+#workspaceLog{
+    margin-top:15px;
+    background:#202629;
+    color:#bfc5c7;
+    border:2px solid #596166;
+    border-radius:3px;
+    padding:13px;
+    min-height:170px;
+    overflow-y:auto;
+    text-align:left;
+    font-family:"Courier New",monospace;
+    font-size:.82rem;
+    line-height:1.6;
+}
+
+progress{
+    appearance:none;
+    width:100%;
+    height:20px;
+}
+
+progress::-webkit-progress-bar{
+    background:#b7bdc0;
+    border:1px solid #8d9497;
+}
+
+progress::-webkit-progress-value{
+    background:#e08b18;
+}
+
+progress::-moz-progress-bar{
+    background:#e08b18;
+}
+
+@media(max-width:950px){
+
+    .workshop-body{
+        grid-template-columns:1fr;
+        height:90vh;
+        overflow-y:auto;
+    }
+
+    .parts-panel,
+    .assembly-panel,
+    .tools-panel{
+        width:100%;
+    }
+
+    #robotPreview{
+        width:180px;
+        height:260px;
+    }
+
+}
+
+@media(max-width:768px){
 
     nav ul{
         flex-direction:column;
+    }
+
+    nav li{
+        border-right:none;
+        border-bottom:1px solid #41494d;
     }
 
     nav a{
@@ -371,292 +728,15 @@ footer{
         padding:20px;
     }
 
-    header h1{
-        font-size:2.2rem;
+    header{
+        padding:30px 6%;
     }
 
-}
+    header h1{
+        font-size:2.1rem;
+    }
 
-#robotWorkshop{
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    z-index: 1000;
-}
-
-#robotWorkshop[hidden]{
-    display:none;
-}
-
-.workshop-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #263238;
-    color: white;
-    padding: 18px 25px;
-    border-radius: 3px solid #1565c0;
-}
-
-.workshop-header h2{
-    font-size: 1.8rem;
-}
-#closeWorkshopButton{
-    background: #d32f2f;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition:.3s;
-}
-
-#closeWorkshopButton:hover{
-    background: #b71c1c;
-    transform: rotate(90deg);
-}
-
-.workshop-body{
-    background:#f5f7fa;
-    width: 100%;
-    max-width: 1200px;
-    height:80vh;
-    display:grid;
-    grid-template-columns:250px 1fr 250px;
-    overflow:hidden;
-    border-radius: 20px;
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
-}
-
-.parts-panel, .tools-panel{
-    background:#eceff1;
-    padding: 25px;
-    overflow-y:auto;
-}
-
-.parts-panel h3, .tools-panel h3{
-    margin-bottom: 20px;
-    color:#1565c0;
-    text-align:center;
-}
-
-.parts-panel button, .tools-panel button{
-    display:block;
-    width:100%;
-    margin-bottom: 15px;
-    padding: 14px;
-    background:#1565c0;
-    color:white;
-    border:none;
-    border-radius: 12px;
-    cursor:pointer;
-    transition:.3s;
-    font-weight:bold;
-}
-
-.parts-panel button:hover, .tools-panel button:hover{
-    background:#0d47a1;
-    transform: translateY(-3px);
-}
-
-.assembly-panel{
-    background:#ffffff;
-    padding: 25px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.assembly-panel h3{
-    margin-bottom: 20px;
-    color:#1565c0;
-}
-
-#assemblyCanvas{
-    flex:1;
-    width:100%;
-    background:repeating-linear-gradient(0deg, #f7fbff, #f7fbff 24px, #edf5fc 25px);
-    border:4px dashed #90caf9;
-    border-radius: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#robotPreview{
-    width: 260px;
-    height: 360px;
-    border:3px dashed #1565c0;
-    background: white;
-    border-radius: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:4rem;
-    color:#1565c0;
-}
-
-#robotPreview::before{
-    content:"";
-}
-
-.robotCardInfo{
-    margin-top:18px;
-    border-top:2px solid #dbe8f5;
-    padding-top:15px;
-}
-
-.robotCardInfo p{
-    margin:8px 0;
-    font-weight:600;
-    color:#1565c0;
-}
-
-#upgrades + hr + h3{
-    text-align:center;
-    color:#1565c0;
-    margin-bottom:20px;
-    font-size:1.6rem;
-}
-
-#upgrades + hr + h3 + p,
-#upgrades + hr + h3 + p + p,
-#upgrades + hr + h3 + p + p + p,
-#upgrades + hr + h3 + p + p + p + p,
-#upgrades + hr + h3 + p + p + p + p + p{
-    background:white;
-    border-left:6px solid #1565c0;
-    padding: 15px 20px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    box-shadow:0 5px 12px rgba(0,0,0,.08);
-}
-
-#machineLevel,
-#conveyorLevel,
-#solarLevel,
-#toolLevel,
-#workerSkill{
-    color:#1565c0;
-    font-weight: bold;
-}
-
-.orderCard{
-    max-width:500px;
-    margin:auto;
-    background:white;
-    border-radius:18px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
-}
-
-.orderCard h3{
-    color:#1565c0;
-    margin-bottom: 18px;
-}
-
-.orderCard p{
-    margin: 12px  0;
-    font-size: 1.05rem;
-    font-weight: 600;
-}
-
-.orderCard button{
-    margin-top:18px;
-    width: 100%;
-    padding: 14px;
-    background: #43a047;
-    color:white;
-    border:none;
-    border-radius: 12px;
-    cursor:pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.orderCard button:hover{
-    background: #2e7d32;
-    transform: translateY(-2px);
-}
-
-#orderProgress{
-    width:100%;
-    height:24px;
-    margin-top: 15px;
-}
-
-#assemblyProgress{
-    width: 100%;
-    height: 25px;
-    margin: 18px 0;
-}
-
-#robotStatus,
-#paintStatus,
-#aiStatus,
-#qualityStatus{
-    font-weight: bold;
-    color:#1565c0;
-}
-
-#workspaceLog{
-    margin-top: 18px;
-    background: white;
-    border:2px dashed #90caf9;
-    border-radius: 14px;
-    padding:15px;
-    min-height: 170px;
-    overflow-y:auto;
-    text-align: left;
-    font-size: .95rem;
-    line-height: 1.6;
-}
-
-progress{
-    appearance: none;
-    width: 100%;
-    height: 20px;
-}
-
-progress::-webkit-progress-bar{
-    background:#e3eaf3;
-    border-radius: 15px;
-}
-
-progress::-webkit-progress-value{
-    background: #1565c0;
-    border-radius:15px;   
-}
-
-progress::-moz-progress-bar{
-    background:#1565c0;
-}
-
-@media(max-width:950px){
-    .workshop-body{
-    grid-template-columns: 1fr;
-    height:auto;
-    overflow-y:auto;
-}
-
-.parts-panel,
-.assembly-panel,
-.tools-panel{
-    width:100%;
-}
-
-#robotPreview{
-    width:180px;
-    height: 260px;
-    font-size: 3rem;
-}
-
+    main{
+        width:94%;
+    }
 }

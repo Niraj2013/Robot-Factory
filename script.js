@@ -990,7 +990,7 @@ function updateAchievementsDisplay(){
                 "#43a047";
         }else{
             achievementItems[index].textContent =
-                "🔒 " + achievement.name;
+                "locked " + achievement.name;
         }
     });
 }
